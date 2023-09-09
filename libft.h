@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:36:30 by btan              #+#    #+#             */
-/*   Updated: 2023/09/08 16:23:39 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/09 11:33:27 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	ft_strlen(char *str);
 void	*ft_memset(void *s, int c, size_t);
 void	*ft_bzero(void *s, size_t n);
 void	*tl_bzero(void *s, size_t n);
+void	*memcpy(void *dest, const void *src, size_t n);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
 int	ft_atoi(int *str);

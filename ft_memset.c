@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 11:25:18 by btan              #+#    #+#             */
-/*   Updated: 2023/09/09 11:28:10 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/09 11:29:14 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void    *ft_memset(void *s, int c, size_t n)
 		((unsigned char *) s)[n] = c;
 	return (s);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 int     main()
@@ -27,4 +27,4 @@ int     main()
 	
 	printf("%s\n", (char *) memset(str, 'a', 7));
 	printf("%s\n", (char *) ft_memset(str, 'a', 7));
-}
+}*/
