@@ -6,21 +6,21 @@
 #    By: btan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 16:34:50 by btan              #+#    #+#              #
-#    Updated: 2023/09/07 12:08:24 by btan             ###   ########.fr        #
+#    Updated: 2023/09/08 12:01:30 by btan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-#SRC = ft_atoi.c  ft_isalnum.c  ft_isalpha.c  ft_isascii.c  ft_isdigit.c  ft_isprint.c  ft_strlcpy.c  ft_strlen.c  ft_tolower.c  ft_toupper.c
+#SRCS = ft_atoi.c  ft_isalnum.c  ft_isalpha.c  ft_isascii.c  ft_isdigit.c  ft_isprint.c  ft_strlcpy.c  ft_strlen.c  ft_tolower.c  ft_toupper.c
 
-SRC = $(wildcard *c)
+SRCS = $(wildcard *c)
 
-CC = clang
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
-OBJECTS = $(SRC:.c=.o)
+OBJECTS = $(SRCS:.c=.o)
 
 all: $(NAME) 
 
@@ -39,4 +39,4 @@ fclean: clean
 re: fclean all
 
 test:
-	cc tests/test.c -L -l libft.a
+	$(CC) $(CFLAGS) tests/test.c -L -l $(NAME)
