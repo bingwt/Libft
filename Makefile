@@ -6,7 +6,7 @@
 #    By: btan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 16:34:50 by btan              #+#    #+#              #
-#    Updated: 2023/09/10 11:33:50 by btan             ###   ########.fr        #
+#    Updated: 2023/09/08 12:01:30 by btan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,9 +38,9 @@ fclean: clean
 
 re: fclean all
 
-test:
+test:	re
 	$(CC) $(CFLAGS) tests/test.c -L -l $(NAME)
+run:	test
+	clear && ./a.out
 debug:
 	$(CC) $(CFLAGS) tests/test.c -L -l $(NAME) -g
-run: test
-	clear && ./a.out
