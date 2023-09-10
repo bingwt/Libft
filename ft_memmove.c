@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 13:26:03 by btan              #+#    #+#             */
-/*   Updated: 2023/09/09 11:30:00 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/10 11:27:30 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n-- > 0)
 			((unsigned char *) dest)[n] = ((unsigned char *) src)[n];
 	}
-	else if (dest < src)
+	else
 		ft_memcpy(dest, src, n);
 	return (dest);
 }

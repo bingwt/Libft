@@ -6,17 +6,20 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 11:52:29 by btan              #+#    #+#             */
-/*   Updated: 2023/09/08 14:08:05 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/10 21:54:24 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
+	ft_memset(s, 0, n);
+}
+/*{
 	char	*ptr;
 
 	ptr = (char *) s;
 	while (n > 0)
-		ptr[(n--) - 1] ='\0';
-}
+		ptr[(n--) - 1] = '\0';
+}*/
