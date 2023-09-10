@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 23:04:57 by btan              #+#    #+#             */
-/*   Updated: 2023/09/11 03:26:00 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/11 03:33:11 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char   *ptr;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *) s;
 	while (*ptr != c && *ptr)
