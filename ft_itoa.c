@@ -46,11 +46,10 @@ char	*ft_itoa(int n)
 		*(str + len) = '-';
 	return (str);
 	}
-
-#include <stdio.h>
-int	main(int argc, char **argv)
-{
-	printf("%d\n", intlen(ft_atoi(argv[1])));
-	printf("%s\n", ft_itoa(ft_atoi(argv[1])));
-	printf("%zu	\n", ft_strlen(ft_itoa(ft_atoi(argv[1]))));
-}
+//#include <stdio.h>
+//int	main(int argc, char **argv)
+//{
+//	printf("%d\n", intlen(ft_atoi(argv[1])));
+//	printf("%s\n", ft_itoa(ft_atoi(argv[1])));
+//	printf("%zu	\n", ft_strlen(ft_itoa(ft_atoi(argv[1]))));
+//}
