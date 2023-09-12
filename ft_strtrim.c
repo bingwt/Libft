@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:52:23 by btan              #+#    #+#             */
-/*   Updated: 2023/09/12 12:23:33 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/12 16:37:45 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*cpy;
 
-	if (!s1 && !set)
-		return (NULL);
 	begin = 0;
 	end = ft_strlen(s1);
-	while (ft_strchr(set, s1[begin]))
+	cpy = malloc(sizeof(char) * (end + 2));
+	ft_memcpy(cpy, s1, ft_strlen(s1));
+	if (!cpy || !set)
+		return (NULL);
+	while (ft_strchr(set, cpy[begin]))
 		begin++;
-	ft_strlcpy((char *)(s1 - begin), s1, (ft_strlen(s1) + 1));
-	while (ft_strrchr(set, s1[end]))
+	ft_strlcpy((cpy - begin), cpy, (ft_strlen(cpy) + 1));
+	while (ft_strrchr(set, cpy[end]))
 		end--;
-	//cpy = malloc(sizeof(char) * (end + 2));
-	cpy = ft_calloc((end), sizeof(char));
+	//cpy = ft_calloc((end), sizeof(char));
 	if (!cpy)
 		return (ft_strdup(""));
-	ft_strlcpy(cpy, s1, end + 2);
+	ft_strlcpy(cpy, cpy, end + 2);
 	return (cpy);
 }
 //{
