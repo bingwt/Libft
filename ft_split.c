@@ -6,16 +6,19 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:46:50 by btan              #+#    #+#             */
-/*   Updated: 2023/09/12 18:47:21 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/12 22:56:35 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static is_sep(char c, char sep)
+#include "libft.h"
+
+static int	is_sep(char c, char sep)
 {
-	if (c = sep || c == '\0')
+	if (c == sep || c == '\0')
 		return (1);
-}
+
 	return (0);
+}
 
 static int	count_word(char *str, char sep)
 {
@@ -25,14 +28,14 @@ static int	count_word(char *str, char sep)
 	while (*str)
 	{
 		if((is_sep(*(str + 1), sep) && !is_sep(*str, sep)) 
-				|| ((*(str + 1) == '\0' && !*str == '\0')))
+				|| ((*(str + 1) == '\0' && (!(*str)) == '\0')))
 			count++;
 		str++;
 	}
 	return (count);
 }
 			
-static *word(char *str, char c)
+static char	*word(char *str, char c)
 {
 	char	*word;
 	int	i;
@@ -53,20 +56,22 @@ static *word(char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
+	char *str_ptr;
 	char	**arr;
-	i = 0;
+	int	i;
 
-	arr = malloc(sizeof(char *) * (count_word(s, c) + 1));
+	str_ptr = (char *) s;
+	arr = malloc(sizeof(char *) * (count_word(str_ptr, c) + 1));
 	i = 0;
-	while (*s)
+	while (*str_ptr)
 	{
-		if (is_sep(*s, c))
+		if (is_sep(*str_ptr, c))
 			s++;
 		else
 		{
-			arr[i] = word(s, c);
-			while (*s && !is_sep(*s, c))
-				s++;
+			arr[i] = word(str_ptr, c);
+			while (*s && !is_sep(*str_ptr, c))
+				str_ptr++;
 			i++;
 		}
 	}
