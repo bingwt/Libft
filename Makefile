@@ -6,7 +6,7 @@
 #    By: btan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 16:34:50 by btan              #+#    #+#              #
-#    Updated: 2023/09/10 11:33:50 by btan             ###   ########.fr        #
+#    Updated: 2023/09/12 11:49:28 by btan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OBJECTS = $(SRCS:.c=.o)
 all: $(NAME) 
 
 .c.o:
-	$(CC) $(CFLAGS) -o $(NAME) -c $< -o $(@:.c=.o)
+	$(CC) $(CFLAGS) -o $(NAME) -c $< -o $(@:.c=.o) -g
 
 $(NAME): $(OBJECTS)
 	ar -rc $(NAME) $(OBJECTS)
@@ -40,7 +40,7 @@ re: fclean all
 
 test:
 	$(CC) $(CFLAGS) tests/test.c -L -l $(NAME)
-debug:
-	$(CC) $(CFLAGS) tests/test.c -L -l $(NAME) -g
+debug:	re
+	$(CC) -g $(CFLAGS) tests/test.c -L -l $(NAME) -o debug.out && gdb --tui debug.out
 run: test
 	clear && ./a.out

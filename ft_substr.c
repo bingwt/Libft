@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 04:05:28 by btan              #+#    #+#             */
-/*   Updated: 2023/09/11 22:36:31 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/12 09:42:59 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = malloc(sizeof(char) * len + 1);
 	if (!sub)
 		return (NULL);
-	if (!s || start > len)
+	if (!s || start >= len)
 		return (ft_strdup(""));
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
