@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 13:26:03 by btan              #+#    #+#             */
-/*   Updated: 2023/09/10 11:27:30 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/11 16:25:51 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	return (dest);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+int	main()
+{
+	int src[5] = {0, 1, 2, 3, 4};
+	int dest[5];
+	size_t n = 5;
+
+	ft_memmove(dest, src, n);
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d\n", src[i]);
+		printf("%d\n", dest[i]);
+	}
+}*/

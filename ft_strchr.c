@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 23:04:57 by btan              #+#    #+#             */
-/*   Updated: 2023/09/11 03:33:11 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/11 17:33:35 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *) s;
-	while (*ptr != c && *ptr)
+	while (*ptr != (char) c && *ptr)
 		ptr++;
-	if (!*ptr && !c)
+	if (!*ptr && !(char) c)
 		return ((char *) ptr);
 	if (!*ptr)
 		return (NULL);
@@ -38,8 +38,8 @@ int	main()
 	printf("Original: %s\n", str);
 	printf("    Real: %s\n", strchr(str, 'e'));
 	printf("    Faux: %s\n", ft_strchr(str, 'e'));
-	printf("    Faux: %s\n", ft_strchr(str, 0));
 	printf("    Real: %s\n", strchr(str, 0));
-	printf("    Faux: %s\n", ft_strchr(str, 'f'));
+	printf("    Faux: %s\n", ft_strchr(str, 0));
 	printf("    Real: %s\n", strchr(str, 'f'));
+	printf("    Faux: %s\n", ft_strchr(str, 'f'));
 }*/

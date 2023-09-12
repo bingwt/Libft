@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:39:25 by btan              #+#    #+#             */
-/*   Updated: 2023/09/10 21:20:06 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/11 22:18:33 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;	
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
@@ -29,7 +31,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		*((unsigned char *) dest++) = *((unsigned char *) src++);
 	return (dest);
 }
-
 #include <stdio.h>
 #include <string.h>
 
@@ -37,21 +38,20 @@ int main()
 {
 	void *mem;	
 	//char str1[] = "abcdefghijklmnopqrstuvwxyz";
-			char str2[] = "zy\0xw\0vu\0\0tsr";
+			char str2[] = "zyxwvutsrqponmlkjihgfedcba";
 if (!(mem = malloc(sizeof(*mem) * 30)))
 			return (0);
 	memset(mem, 'j', 30);
 				//puts("str1 before memcpy ");
 					//puts(str1);
 
-						ft_memcpy(mem, str2, 11);
+						ft_memcpy(mem, str2, 26);
 
 							puts("\nstr1 after memcpy ");
 								puts(mem);
 
 									return 0;
 }
-
 #include <stdio.h>
 #include <string.h>
 int main()

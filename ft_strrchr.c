@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 23:10:53 by btan              #+#    #+#             */
-/*   Updated: 2023/09/11 03:58:38 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/11 17:33:55 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char) c)
 			return ((char *) &s[i]);
 		i--;
 	}
