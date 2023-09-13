@@ -66,8 +66,8 @@ $(NAME): $(OBJECTS)
 	ar -rc $(NAME) $(OBJECTS)
 
 bonus: $(NAME) $(BONUS_OBJECTS)
-	$(CC) $(CFLAGS) -c $(BONUS_OBJECTS) -I./
-	ar rc $(NAME) -c $< -o $(@:.c=.o) -g
+	$(CC) $(CFLAGS) -c $(BONUS_SRCS) -I./
+	ar rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 clean:
 	rm -rf $(OBJECTS) $(BONUS_OBJECTS)
