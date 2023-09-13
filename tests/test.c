@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:47:39 by btan              #+#    #+#             */
-/*   Updated: 2023/09/12 16:25:29 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:41:14 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,14 +87,23 @@ int             main(int argc, const char *argv[])
 */
 
 //ft_strtrim
-int     main()
+//int     main()
+//{
+//        char    s1[] = "abcd";
+//        //char s1[] = "\nlorem \n ipsum \t dolor \n sit \t amet\n";
+//        char    *set = "abc";
+//        //ft_strchr(set, s1[0]);
+//	char	*trim = ft_strtrim(s1, set);
+//        printf("%s\n", trim);
+//        //printf("%s\n", s1);
+//        printf("%zu\n", ft_strlen(trim));
+//}
+
+//ft_putendl_fd
+int	main()
 {
-        char    s1[] = "abcd";
-        //char s1[] = "\nlorem \n ipsum \t dolor \n sit \t amet\n";
-        char    *set = "abc";
-        //ft_strchr(set, s1[0]);
-	char	*trim = ft_strtrim(s1, set);
-        printf("%s\n", trim);
-        //printf("%s\n", s1);
-        printf("%zu\n", ft_strlen(trim));
+	//ft_putchar_fd('a', 1);
+	//ft_putendl_fd("test", 1);
+	ft_putstr_fd("test", 1);
 }
+
