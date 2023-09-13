@@ -89,12 +89,12 @@ int             main(int argc, const char *argv[])
 //ft_strtrim
 int     main()
 {
-        char    s1[] = "  Hello  WorldH";
+        char    s1[] = "abcd";
         //char s1[] = "\nlorem \n ipsum \t dolor \n sit \t amet\n";
-        char    *set = " Hd";
+        char    *set = "abc";
         //ft_strchr(set, s1[0]);
 	char	*trim = ft_strtrim(s1, set);
         printf("%s\n", trim);
-        printf("%s\n", s1);
+        //printf("%s\n", s1);
         printf("%zu\n", ft_strlen(trim));
 }
