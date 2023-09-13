@@ -21,17 +21,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (NULL);
 	begin = 0;
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
 	while (s1[begin] && ft_strchr(set, s1[begin]) != NULL)
 		begin++;
-	while (end > begin && ft_strrchr(set, s1[end]) != NULL)
+	while (end > begin && ft_strrchr(set, s1[end - 1]) != NULL)
 		end--;
 	if (begin > end)
 		return (ft_strdup(""));
-	cpy = malloc(sizeof(char) * (end + 2));
+	cpy = malloc(sizeof(char) * (end - begin + 1));
 	if (!cpy)
 		return (ft_strdup(""));
-	ft_strlcpy(cpy, s1 + begin, end - begin + 2);
+	ft_strlcpy(cpy, s1 + begin, end - begin + 1);
 	cpy[end - begin + 1] = '\0';
 	return (cpy);
 }

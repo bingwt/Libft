@@ -16,8 +16,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (dest > src)
 	{
-		while (n-- > 0)
+		while (n--)
+		{
 			((unsigned char *) dest)[n] = ((unsigned char *) src)[n];
+			if (!n)
+				return (dest);
+		}
 	}
 	else
 		ft_memcpy(dest, src, n);

@@ -31,7 +31,7 @@
 	printf("%s\n", str);
 	//printf("%d\n", ft_isalnum('a'));
 }
-
+*/
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -45,11 +45,11 @@ int main()
 	printf("Original string :%s\n ", str);
 	memcpy(first + 8, first, 10);
 	printf("Real : %s\n ", str);
-	ft_memcpy(second + 8, first, 10);
+	ft_memmove(second + 8, first, 10);
 	printf("Faux : %s\n ", str);
 	return (0);
 }
-
+/*
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -100,10 +100,10 @@ int             main(int argc, const char *argv[])
 //}
 
 //ft_putendl_fd
-int	main()
-{
-	//ft_putchar_fd('a', 1);
-	//ft_putendl_fd("test", 1);
-	ft_putstr_fd("test", 1);
-}
-
+//int	main()
+//{
+//	//ft_putchar_fd('a', 1);
+//	//ft_putendl_fd("test", 1);
+//	ft_putstr_fd("test", 1);
+//}
+//
