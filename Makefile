@@ -6,7 +6,7 @@
 #    By: btan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 16:34:50 by btan              #+#    #+#              #
-#    Updated: 2023/09/13 17:23:26 by btan             ###   ########.fr        #
+#    Updated: 2023/09/14 01:23:55 by btan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ SRCS =  ft_atoi.c \
 		ft_putnbr_fd.c \
 
 BONUS_SRCS = ft_lstnew_bonus.c \
-	     #ft_lstadd_front
+	     ft_lstadd_front
 
 CC = cc
 
