@@ -18,21 +18,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*cpy;
 
-	begin = 0;
-	end = ft_strlen(s1);
-	cpy = malloc(sizeof(char) * (end + 2));
-	ft_memcpy(cpy, s1, ft_strlen(s1));
-	if (!cpy || !set)
+	if (!s1)
 		return (NULL);
-	while (ft_strchr(set, cpy[begin]))
+	begin = 0;
+	end = ft_strlen(s1) - 1;
+	while (s1[begin] && ft_strchr(set, s1[begin]) != NULL)
 		begin++;
-	ft_strlcpy((cpy - begin), cpy, (ft_strlen(cpy) + 1));
-	while (ft_strrchr(set, cpy[end]))
+	while (end > begin && ft_strrchr(set, s1[end]) != NULL)
 		end--;
-	//cpy = ft_calloc((end), sizeof(char));
+	if (begin > end)
+		return (ft_strdup(""));
+	cpy = malloc(sizeof(char) * (end + 2));
+	//cpy = ft_calloc((end + 2), sizeof(char));
 	if (!cpy)
 		return (ft_strdup(""));
-	ft_strlcpy(cpy, cpy, end + 2);
+	ft_strlcpy(cpy, s1 + begin, end - begin + 2);
+	cpy[end - begin + 1] = '\0';
 	return (cpy);
 }
 //{
