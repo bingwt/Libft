@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:36:06 by btan              #+#    #+#             */
-/*   Updated: 2023/09/15 17:46:45 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 22:08:13 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	while(*lst)
+	t_list	*next;
+
+	while (*lst)
 	{
-		del(*lst->content);
-		free(lst);
+		next = (**lst).next;
+		del((**lst).content);
+		free(*lst);
+		*lst = next;
+		//next = (*lst)->next;
+		//del((*lst)->content);
+		//free(*lst);
+		//(*lst) = next;
 	}
 }
-

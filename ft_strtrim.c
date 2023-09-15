@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:52:23 by btan              #+#    #+#             */
-/*   Updated: 2023/09/13 16:39:42 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 21:50:04 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*cpy;
 
-	if (!s1)
+	if (!s1 && !set)
 		return (NULL);
 	begin = 0;
 	end = ft_strlen(s1);
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	cpy = malloc(sizeof(char) * (end - begin + 1));
 	if (!cpy)
-		return (ft_strdup(""));
+		return (NULL);
 	ft_strlcpy(cpy, s1 + begin, end - begin + 1);
 	cpy[end - begin + 1] = '\0';
 	return (cpy);
