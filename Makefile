@@ -6,7 +6,7 @@
 #    By: btan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 16:34:50 by btan              #+#    #+#              #
-#    Updated: 2023/09/14 01:23:55 by btan             ###   ########.fr        #
+#    Updated: 2023/09/15 13:07:12 by btan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRCS =  ft_atoi.c \
 BONUS_SRCS = ft_lstnew_bonus.c \
 	     ft_lstadd_front_bonus.c \
 	     ft_lstsize_bonus.c \
-	     ft_lstlast_bonus.c
+	     ft_lstlast_bonus.c \
+	     ft_lstadd_back_bonus.c
 
 CC = cc
 
@@ -61,15 +62,13 @@ OBJECTS = $(SRCS:.c=.o)
 BONUS_OBJECTS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME) 
-
-.c.o:
-	$(CC) $(CFLAGS) -o $(NAME) -c $< -o $(@:.c=.o) -g
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 $(NAME): $(OBJECTS)
 	ar -rc $(NAME) $(OBJECTS)
 
 bonus: $(NAME) $(BONUS_OBJECTS)
-	$(CC) $(CFLAGS) -c $(BONUS_SRCS) -I./
+	$(CC) $(CFLAGS) -c $(BONUS_SRCS)
 	ar rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 clean:
