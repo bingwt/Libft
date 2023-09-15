@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:23:26 by btan              #+#    #+#             */
-/*   Updated: 2023/09/13 16:43:51 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 17:15:35 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nbr;
+	unsigned int	nbr;
 
 	if (n < 0)
 	{

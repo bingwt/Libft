@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:08:03 by btan              #+#    #+#             */
-/*   Updated: 2023/09/13 14:32:45 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 17:14:13 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	int	i;
-	
+	int		i;
+
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	i = 0;
 	if (!str)
