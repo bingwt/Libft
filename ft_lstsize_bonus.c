@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:38:13 by btan              #+#    #+#             */
-/*   Updated: 2023/09/15 17:38:15 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 22:48:36 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	count = 0;
 	while (lst)
 	{
-		lst = lst->next;
+		lst = (*lst).next;
 		count++;
 	}
 	return (count);

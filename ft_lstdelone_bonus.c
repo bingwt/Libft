@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:56:04 by btan              #+#    #+#             */
-/*   Updated: 2023/09/15 17:29:42 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 22:48:04 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
+	del((*lst).content);
 	free(lst);
 }

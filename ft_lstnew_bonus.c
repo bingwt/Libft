@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:29:34 by btan              #+#    #+#             */
-/*   Updated: 2023/09/15 11:10:45 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 22:50:07 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	node = malloc(sizeof(t_list));
 	if (!node)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
+	(*node).content = content;
+	(*node).next = NULL;
 	return (node);
 }

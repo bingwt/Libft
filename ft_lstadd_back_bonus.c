@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:55:56 by btan              #+#    #+#             */
-/*   Updated: 2023/09/15 17:11:09 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/15 22:47:44 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	last = ft_lstlast(*lst);
 
-	last->next = new;
+	(*last).next = new;
 }
