@@ -19,11 +19,9 @@ char	*ft_strchr(const char *s, int c)
 	ptr = (unsigned char *) s;
 	while (*ptr != (char) c && *ptr)
 		ptr++;
-	if (!*ptr && !(char) c)
+	if (*ptr == (char) c)
 		return ((char *) ptr);
-	if (!*ptr)
-		return (NULL);
-	return ((char *) ptr);
+	return (NULL);
 }
 /*
 #include <string.h>
