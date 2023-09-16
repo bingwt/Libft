@@ -6,7 +6,7 @@
 #    By: btan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 16:34:50 by btan              #+#    #+#              #
-#    Updated: 2023/09/15 17:44:55 by btan             ###   ########.fr        #
+#    Updated: 2023/09/16 17:56:40 by btan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,3 +89,4 @@ debug:	re
 	$(CC) -g $(CFLAGS) tests/test.c -L -l $(NAME) -o debug.out && gdb --tui debug.out
 run: test
 	clear && ./a.out
+.PHONY: all bonus clean fclean re

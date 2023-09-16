@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 23:14:25 by btan              #+#    #+#             */
-/*   Updated: 2023/09/16 15:42:29 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/16 18:12:40 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 	len = intlen(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
-		return(NULL);
+		return (NULL);
 	nbr = n;
 	if (nbr < 0)
 		nbr = -nbr;

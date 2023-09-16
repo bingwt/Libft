@@ -6,7 +6,7 @@
 /*   By: btan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:47:39 by btan              #+#    #+#             */
-/*   Updated: 2023/09/13 15:41:14 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/16 17:45:49 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,23 +32,23 @@
 	//printf("%d\n", ft_isalnum('a'));
 }
 */
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char str[100] = "hello";
-	char *first;
-	char *second;
-	
-	first = str;
-	second = str;
-	printf("Original string :%s\n ", str);
-	memcpy(first + 8, first, 10);
-	printf("Real : %s\n ", str);
-	ft_memmove(second + 8, first, 10);
-	printf("Faux : %s\n ", str);
-	return (0);
-}
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char str[100] = "hello";
+//	char *first;
+//	char *second;
+//	
+//	first = str;
+//	second = str;
+//	printf("Original string :%s\n ", str);
+//	memcpy(first + 8, first, 10);
+//	printf("Real : %s\n ", str);
+//	ft_memmove(second + 8, first, 10);
+//	printf("Faux : %s\n ", str);
+//	return (0);
+//}
 /*
 #include <stdlib.h>
 #include <unistd.h>
@@ -86,18 +86,17 @@ int             main(int argc, const char *argv[])
 }
 */
 
-//ft_strtrim
-//int     main()
-//{
-//        char    s1[] = "abcd";
-//        //char s1[] = "\nlorem \n ipsum \t dolor \n sit \t amet\n";
-//        char    *set = "abc";
-//        //ft_strchr(set, s1[0]);
-//	char	*trim = ft_strtrim(s1, set);
-//        printf("%s\n", trim);
-//        //printf("%s\n", s1);
-//        printf("%zu\n", ft_strlen(trim));
-//}
+#include <stdio.h>
+int   main()
+{
+      char    *s1 = "  hello  ";
+      //char s1[] = "lorem \n ipsum \t dolor \n sit \t amet"
+      char    *set = " ";
+      //ft_strchr(set, s1[0]);
+      printf("%s\n", ft_strtrim(s1, set));
+      printf("%zu\n", ft_strlen(s1));
+}
+
 
 //ft_putendl_fd
 //int	main()
