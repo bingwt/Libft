@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 23:14:25 by btan              #+#    #+#             */
-/*   Updated: 2023/09/16 15:22:49 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/16 15:42:29 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	intlen(int n)
 	int	len;
 
 	len = 0;
+	if (n <= 0)
+		len++;
 	while (n != 0)
 	{
 		n /= 10;
@@ -32,21 +34,22 @@ char	*ft_itoa(int n)
 	long	nbr;
 
 	len = intlen(n);
-	str = malloc(sizeof(char) * (len + 2));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return(NULL);
 	nbr = n;
 	if (nbr < 0)
-	{
-		str[0] = '-';
 		nbr = -nbr;
-	}
 	str[len] = '\0';
+	if (!nbr)
+		str[0] = '0'; 
 	while (len--)
 	{
 		str[len] = '0' + nbr % 10;
 		nbr /= 10;
 	}
+	if (n < 0)
+		str[0] = '-';
 	return (str);
 }
 //#include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: btan <btan@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:40:01 by btan              #+#    #+#             */
-/*   Updated: 2023/09/15 17:40:02 by btan             ###   ########.fr       */
+/*   Updated: 2023/09/16 16:27:58 by btan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 {
 	t_list	*head;
 	t_list	*node;
+	t_list	*content;
 
 	head = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(f((*lst).content));
+		content = f((*lst).content);
+		node = ft_lstnew(content);
 		if (!node)
+		{
+			del(content);
+			ft_lstclear(&head, del);
 			return (NULL);
+		}
 		ft_lstadd_back(&head, node);
 		lst = (*lst).next;
 	}
