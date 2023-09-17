@@ -87,17 +87,27 @@ int             main(int argc, const char *argv[])
 */
 
 #include <stdio.h>
-int   main()
+//int   main()
+//{
+//      char    *s1 = "  hello  ";
+//      //char s1[] = "lorem \n ipsum \t dolor \n sit \t amet"
+//      char    *set = " ";
+//      //ft_strchr(set, s1[0]);
+//      printf("%s\n", ft_strtrim(s1, set));
+//      printf("%zu\n", ft_strlen(s1));
+//}
+
+int     main()
 {
-      char    *s1 = "  hello  ";
-      //char s1[] = "lorem \n ipsum \t dolor \n sit \t amet"
-      char    *set = " ";
-      //ft_strchr(set, s1[0]);
-      printf("%s\n", ft_strtrim(s1, set));
-      printf("%zu\n", ft_strlen(s1));
+        char *s = "hello world 123";
+        char c = ' ';
+	char **arr;
+
+	arr = ft_split(s, c);
+        printf("%s\n", arr[0]);
+        printf("%s\n", arr[1]);
+        printf("%s\n", arr[2]);
 }
-
-
 //ft_putendl_fd
 //int	main()
 //{

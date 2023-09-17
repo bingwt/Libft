@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 		nbr = -nbr;
 	str[len] = '\0';
 	if (!nbr)
-		str[0] = '0'; 
+		str[0] = '0';
 	while (len--)
 	{
 		str[len] = '0' + nbr % 10;
